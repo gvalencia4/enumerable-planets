@@ -9,6 +9,21 @@
 </head>
 <body>
 <h1>Pick a planet:</h1>
+<table class="table table-sm table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Planet Name</th>
+            <th scope="col">Year Length</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr th:each="planet : ${planets}">
+            <td th:text="${planet.displayName}">Planet Name</td>
+            <td th:text="${planet.yearLength}">Planet Year Length</td>
+        </tr>
+    </tbody>
+</table>
 
 </body>
 </html>
